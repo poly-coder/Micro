@@ -1,4 +1,4 @@
-namespace Micro.Preamble.Tests
+namespace Micro.Tests
 
 open Micro
 

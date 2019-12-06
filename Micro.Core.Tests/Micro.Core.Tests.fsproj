@@ -14,12 +14,14 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     <PackageReference Include="TaskBuilder.fs" Version="2.1.0" />
+    <PackageReference Include="Unquote" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="PreambleTests.fs" />
     <Compile Include="SeqTest.fs" />
     <Compile Include="OptionTest.fs" />
+    <Compile Include="ValidationTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
