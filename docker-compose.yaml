@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  nats:
+    image: nats
+    hostname: nats
+    restart: always
+    ports:
+      - '4222:4222'
+      - '8222:8222'
+
+  stan:
+    image: nats-streaming
+    hostname: stan
+    restart: always
+    ports:
+      - '4223:4222'
+      - '8223:8222'
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - '27017:27017'

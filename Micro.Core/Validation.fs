@@ -212,6 +212,8 @@ module Validator =
 
   let asError messageFn validator = validator messageFn >> ValResult.asError
 
+  let noErrors _ = ValResult.empty
+
   let isNotEmptyCond = System.String.IsNullOrEmpty >> not
   let isNotEmptyWith messageFn = ofCond isNotEmptyCond messageFn
   let isNotEmpty = isNotEmptyWith |> asError (fun _ -> "Should not be empty")
@@ -336,23 +338,25 @@ let inline withProp propertyName = ValResult.withProp propertyName
 let inline withIndex index = ValResult.withIndex index
 let inline withCollection propertyName index = ValResult.withCollection propertyName index
 
+let noErrors = Validator.noErrors
+
 let isNotEmpty = Validator.isNotEmpty
 let isNotBlank = Validator.isNotBlank
-let hasMinLength minLength = Validator.hasMinLength minLength
-let hasMaxLength maxLength = Validator.hasMaxLength maxLength
-let hasLength length = Validator.hasLength length
-let matchesRegex message regex = Validator.matchesRegex message regex
+let hasMinLength = Validator.hasMinLength
+let hasMaxLength = Validator.hasMaxLength
+let hasLength = Validator.hasLength
+let matchesRegex = Validator.matchesRegex
 
-let isGreaterThan value = Validator.isGreaterThan value
-let isGreaterThanOrEqualTo value = Validator.isGreaterThanOrEqualTo value
-let isNotGreaterThan value = Validator.isNotGreaterThan value
-let isNotGreaterThanOrEqualTo value = Validator.isNotGreaterThanOrEqualTo value
-let isLessThan value = Validator.isLessThan value
-let isLessThanOrEqualTo value = Validator.isLessThanOrEqualTo value
-let isNotLessThan value = Validator.isNotLessThan value
-let isNotLessThanOrEqualTo value = Validator.isNotLessThanOrEqualTo value
-let isBetween minValue maxValue = Validator.isBetween minValue maxValue
-let isNotBetween minValue maxValue = Validator.isNotBetween minValue maxValue
+let isGreaterThan = Validator.isGreaterThan
+let isGreaterThanOrEqualTo = Validator.isGreaterThanOrEqualTo
+let isNotGreaterThan = Validator.isNotGreaterThan
+let isNotGreaterThanOrEqualTo = Validator.isNotGreaterThanOrEqualTo
+let isLessThan = Validator.isLessThan
+let isLessThanOrEqualTo = Validator.isLessThanOrEqualTo
+let isNotLessThan = Validator.isNotLessThan
+let isNotLessThanOrEqualTo = Validator.isNotLessThanOrEqualTo
+let isBetween = Validator.isBetween
+let isNotBetween = Validator.isNotBetween
 
 let (<&&>) left right = Validator.allValidationsPass ValLevel.Warn [left; right]
 let (<||>) left right = Validator.someValidationPass ValLevel.Warn [left; right]
