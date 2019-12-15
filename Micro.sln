@@ -7,7 +7,17 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Micro.Core", "Micro.Core\Mi
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Micro.Core.Tests", "Micro.Core.Tests\Micro.Core.Tests.fsproj", "{8550D599-58B8-4D0D-A829-3A5B1A803E4B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "BasicSamples.Domain", "Samples\BasicSamples.Domain\BasicSamples.Domain.fsproj", "{14F01002-90E3-4FD4-A367-7A9DA8DB16F3}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "BasicSamples.Domain", "Samples\BasicSamples.Domain\BasicSamples.Domain.fsproj", "{14F01002-90E3-4FD4-A367-7A9DA8DB16F3}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Micro.Serialization.Json", "Micro.Serialization.Json\Micro.Serialization.Json.fsproj", "{C6FF6DC9-1AF3-4616-B278-F3FC012A2A1A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Micro.Serialization.Json.Tests", "Micro.Serialization.Json.Tests\Micro.Serialization.Json.Tests.fsproj", "{DE725A52-59CC-4769-B8EA-4FA6253F7C15}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Micro.Services.Abstractions", "Micro.Services.Abstractions\Micro.Services.Abstractions.fsproj", "{FB3F3432-F288-4614-A37F-32591CEE7372}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Micro.Services.Storage.Azure.Cosmos", "Micro.Services.Storage.Azure.Cosmos\Micro.Services.Storage.Azure.Cosmos.fsproj", "{F378A07C-D0DA-49BB-845E-D956C23E938D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Micro.Services.Storage.Azure.Blobs", "Micro.Services.Storage.Azure.Blobs\Micro.Services.Storage.Azure.Blobs.fsproj", "{E8B93562-9750-4590-83C6-B92DED34919A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +37,26 @@ Global
 		{14F01002-90E3-4FD4-A367-7A9DA8DB16F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14F01002-90E3-4FD4-A367-7A9DA8DB16F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14F01002-90E3-4FD4-A367-7A9DA8DB16F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FF6DC9-1AF3-4616-B278-F3FC012A2A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FF6DC9-1AF3-4616-B278-F3FC012A2A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FF6DC9-1AF3-4616-B278-F3FC012A2A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FF6DC9-1AF3-4616-B278-F3FC012A2A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE725A52-59CC-4769-B8EA-4FA6253F7C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE725A52-59CC-4769-B8EA-4FA6253F7C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE725A52-59CC-4769-B8EA-4FA6253F7C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE725A52-59CC-4769-B8EA-4FA6253F7C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3F3432-F288-4614-A37F-32591CEE7372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3F3432-F288-4614-A37F-32591CEE7372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3F3432-F288-4614-A37F-32591CEE7372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3F3432-F288-4614-A37F-32591CEE7372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F378A07C-D0DA-49BB-845E-D956C23E938D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F378A07C-D0DA-49BB-845E-D956C23E938D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F378A07C-D0DA-49BB-845E-D956C23E938D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F378A07C-D0DA-49BB-845E-D956C23E938D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B93562-9750-4590-83C6-B92DED34919A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B93562-9750-4590-83C6-B92DED34919A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B93562-9750-4590-83C6-B92DED34919A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B93562-9750-4590-83C6-B92DED34919A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
